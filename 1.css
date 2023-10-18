@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+button {
+    font-family: inherit;
+}
+.wrapper {
+    width: 30%;
+    text-align: center;
+    margin: 50px auto;
+    padding: 40px 20px;
+    border: 1px solid rgb(26, 172, 111);
+}
+.desc {
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+#input-number {
+    border: 1px solid #80808069;
+    padding: 8px 0 8px 8px;
+    outline:none;
+    caret-color: rgb(26, 172, 111) ;
+    margin-left: 20px;
+}
+#input-number:focus {
+    border: 1px solid rgb(26, 172, 111);
+}
+.count-times {
+    margin-top: 20px;
+}
+.btn-save, .btn-check, .btn-back {
+    margin: 20px auto;
+    color: #fff;
+    border: none;
+    background-color: rgb(26, 172, 111);
+    cursor: pointer;
+    padding: 8px 20px;
+}
+.result-msg {
+    color: red;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="1.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <p class="desc">
+       Y/c: Nhập 10 số nguyên từ người dùng. Kiểm tra những số nào là số nguyên tố,
+        xuất ra trang web.
+      </p>
+      <form action="">
+        <label for="input-number">Nhập 10 số: </label>
+        <input type="number" id="input-number" name="number-check" value="" />
+        <p class="count-times"></p>
+      </form>
+      <button class="btn-save">Enter</button><br />
+      <p id="result-text"></p>
+  
+      <button class="btn-check" style="display: none">
+        Kiểm tra số nguyên tố
+      </button> 
+      <div class="result">
+        <h4 class="result-msg"></h4>
+      </div>
+      <button class="btn-back" style="display: none;">Trở về</button>
+    </div>
+    <script src="1.js"></script>
+  </body>
+</html>
