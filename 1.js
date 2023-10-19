@@ -42,7 +42,7 @@ const handleClickCheck = () => {
       ? `${arrPrimeNumber} là số nguyên tố`
       : "Các số vừa nhập không có số nào là số nguyên tố";
   btnBack.style.display = "block";
-  btnCheck.setAttribute("disabled", "disabled");
+  btnCheck.disabled = true;
 }
 
 
@@ -63,5 +63,5 @@ document.addEventListener('contextmenu', event => event.preventDefault()
 );
 document.addEventListener("keydown", function (e){
   e.ctrlKey && e.preventDefault()
-  e.key == 123 && e.preventDefault();
+  e.keyCode == 123 && e.preventDefault();
 });

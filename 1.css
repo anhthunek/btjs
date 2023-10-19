@@ -45,3 +45,6 @@ button {
 .result-msg {
     color: red;
 }
+button[disabled]{
+    opacity: 0.5;
+}
