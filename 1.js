@@ -1,3 +1,6 @@
+// Variables
+var count = 10;
+
 const arrNumbers = [];
 const arrPrimeNumber = [];
 
@@ -7,13 +10,13 @@ const btnCheck = document.querySelector(".btn-check");
 const btnBack = document.querySelector(".btn-back");
 const btnDelete = document.querySelector(".btn-clear");
 
-var count = 10;
-btnSave.onclick = () => {
+// Func
+const handleClickEnter = () => {
   inputNumber.value === ""
     ? this.setAttribute("disabled", "disabled")
     : arrNumbers.push(inputNumber.value);
   count -= 1;
-  document.querySelector(".count-times").innerText = `Còn ${count} lượt`;
+  document.querySelector(".count-times").innerText = `Còn ${count} số`;
   inputNumber.value = "";
   inputNumber.focus();
   document.getElementById(
@@ -25,9 +28,8 @@ btnSave.onclick = () => {
     btnSave.disabled = true;
     btnCheck.style.display = "block";
   }
-};
-
-btnCheck.onclick = (e) => {
+}
+const handleClickCheck = () => {
   for (let i = 0; i < arrNumbers.length; i++) {
     let countSNT = 0;
     for (let j = 1; j <= arrNumbers[i]; j++) {
@@ -41,19 +43,25 @@ btnCheck.onclick = (e) => {
       : "Các số vừa nhập không có số nào là số nguyên tố";
   btnBack.style.display = "block";
   btnCheck.setAttribute("disabled", "disabled");
-};
+}
 
-btnBack.onclick = () => {
-  location.reload();
-};
 
+
+// When clicked
+btnSave.onclick = () => {handleClickEnter()}
+btnCheck.onclick = () => {handleClickCheck()};
+btnBack.onclick = () => { location.reload();};
+
+// When press
+inputNumber.onkeydown = (e) => {
+  e.keyCode === 13 && handleClickEnter();
+}
+
+
+// Private
 document.addEventListener('contextmenu', event => event.preventDefault()
 );
-document.addEventListener("keydown", function (event){
-  if (event.ctrlKey){
-     event.preventDefault();
-  }
-  if(event.altKey == 123){
-     event.preventDefault();
-  }
+document.addEventListener("keydown", function (e){
+  e.ctrlKey && e.preventDefault()
+  e.key == 123 && e.preventDefault();
 });

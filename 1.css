@@ -10,11 +10,12 @@ button {
     font-family: inherit;
 }
 .wrapper {
-    width: 30%;
     text-align: center;
     margin: 50px auto;
-    padding: 40px 20px;
-    border: 1px solid rgb(26, 172, 111);
+}
+.form-area {
+    display: flex;
+    justify-content: center;
 }
 .desc {
     margin-bottom: 40px;
